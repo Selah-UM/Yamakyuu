@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header{
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 3%;
+  background-color: #348da9;
+}
+/* .headerInner{
+  display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+} */
+.brand{
+  margin: 0;
+  padding: 0;
+  /* display: inline-block; */
+  font-weight: bold;
+  font-size: 30px;
+  color: #E8E5E5;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style: none;
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .headerInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 600px) {
+  .subMenu{
+    display: flex;
+  }
+}
+@media (max-width: 599px) {
+  .subMenu{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    /* background-color: #d9f0f7; */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    /* transition: transform 0.3s ease-out, opacity 0.3s ease-out; */
+  }
+  .subMenu.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .navItem:hover .subMenu{
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-flow: column;
+  }
+}
+.headNav{
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 0 0 auto;
+}
+.headNav li{
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  /* margin: 0 0 0 15px; */
+}
+.headNav a{
+  display: block;
+  line-height: 2;
+  color: #E8E5E5;
+}
+.navItem{
+  position: relative;
+}
+.navItem a {
+  display: block;
+  padding: 0
+}
+.subMenu{
+  display: none;
+}
+.subMenu li{
+  display: inline;
+}
+.subMenu a{
+  display: block;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(245, 245, 245);
+}
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+/* .brand {} */
+
+/* .site-header {
+  background-color: #def7ff;
+} */
+
+/* .site-header__wrapper {} */
